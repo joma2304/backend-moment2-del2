@@ -228,6 +228,7 @@ body {
 
   #add-arbets-form {
     max-width: 400px; 
+    width: 85%;
     margin: 0 auto; 
     padding: 20px; 
     background-color: #f9f9f9; 
@@ -249,4 +250,16 @@ body {
     border: 1px solid #ccc; 
     border-radius: 5px; 
     box-sizing: border-box; 
+  }
+
+  .about-container {
+    background-color: #f9f9f9; 
+    width: 85%;
+    padding: 10px;
+    border-radius: 50px;
+  }
+
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
   }

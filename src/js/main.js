@@ -16,21 +16,35 @@ async function getWorkExperiences() { //Hämtar från api
   }
   
   async function showWorkExperiences() { //Funktion för att läsa ut svaret
-    const workExperiences = await getWorkExperiences();
-    const workExperiencesList = document.getElementById('arbets-list'); //Ul element
-    workExperiences.forEach(workExperience => { //Loopar igenom svar
-      const listItem = document.createElement('li'); //Skapar li element
-      listItem.textContent = `Företagsnamn: ${workExperience.companyname}, Arbetstitel: ${workExperience.jobtitle}, Plats: ${workExperience.location} `; //Lägger till i LI
-      
-      // Lägg till en knapp för att ta bort work experience
-      const deleteButton = document.createElement('button'); //Knapp för att ta bort
-      deleteButton.textContent = 'Ta bort'; //Text till knapp
-      deleteButton.addEventListener('click', () => deleteWorkExperience(workExperience.id)); //Eventlistner för knapp
-      
-      listItem.appendChild(deleteButton); //Lägger till i knapp
-      workExperiencesList.appendChild(listItem); //Slår ihop med ul
+    const workExperiences = await getWorkExperiences(); //Lagrar svaren i variabel
+    const workExperiencesList = document.getElementById('arbets-list'); //Hämtar UL-element
+
+    // Rensa listan först
+    workExperiencesList.innerHTML = '';
+
+    workExperiences.forEach(workExperience => { //Loopar igenom alla svar
+        const listItem = document.createElement('li'); //Skapar li
+
+        const companyNameLabel = document.createElement('p'); //Skapar p
+        companyNameLabel.textContent = `Företagsnamn: ${workExperience.companyname}`;
+        listItem.appendChild(companyNameLabel); //Slår ihop
+
+        const jobTitleLabel = document.createElement('p'); //skapar p
+        jobTitleLabel.textContent = `Arbetstitel: ${workExperience.jobtitle}`;
+        listItem.appendChild(jobTitleLabel); //Slår ihop
+
+        const locationLabel = document.createElement('p'); //Skapar p
+        locationLabel.textContent = `Plats: ${workExperience.location}`;
+        listItem.appendChild(locationLabel); //Slår ihop
+
+        const deleteButton = document.createElement('button'); //Skapar delete knapp
+        deleteButton.textContent = 'Ta bort'; //Knappens innehåll
+        deleteButton.addEventListener('click', () => deleteWorkExperience(workExperience.id)); //Eventlistner för knapp att ta bort, om klickad körs funktion för att ta bort
+        listItem.appendChild(deleteButton); //Slår ihop
+
+        workExperiencesList.appendChild(listItem); //Slår ihop elementen
     });
-  }
+}
   
   async function deleteWorkExperience(id) { //Funktion för att ta bort
     try {
