@@ -52,7 +52,7 @@ nav a {
     padding: 0 1em;
 }
 
-nav li:hover {
+nav a:hover {
     cursor: pointer;
     color: #fff;
 }
@@ -76,7 +76,7 @@ nav li:hover {
 }
 
 .menu-btn:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(168, 223, 235);
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
     border-radius: 50px;
     transition: ease-in 0.3s;
