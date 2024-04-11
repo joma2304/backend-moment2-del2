@@ -58,7 +58,7 @@ header {
   }
   
   .active {
-    color: #ffffff;
+    color: #2833c0;
   }
   
   /* Meny knapp, öppna meny */
@@ -118,7 +118,7 @@ header {
   /* Media querys */
   @media only screen and (max-width: 992px) {
     nav {
-        background-color: rgb(125, 199, 125);
+        background-color: rgb(184, 225, 184);
     }
   }
 
@@ -191,9 +191,6 @@ body {
     background-color: #f9f9f9; 
   }
   
-  #arbets-list li:last-child {
-    border-bottom: none; 
-  }
 
   button {
     background-color: #eb4e62; 

@@ -40,7 +40,7 @@ async function getWorkExperiences() { //Hämtar från api
         if (!response.ok) {
             throw new Error('Failed to delete work experience');
         }
-        // Ladda om sidan för att uppdatera listan och därmed försvinner borttagna objektet
+        // Ladda om sidan för att uppdatera listan och därmed försvinner borttagna objektet från den
         location.reload();
     } catch (error) {
         console.error('Error:', error);
@@ -58,6 +58,14 @@ async function addWorkExperience(event) {
     event.preventDefault(); // Förhindrar att formuläret skickas som vanligt
 
     const formData = new FormData(event.target); // Hämtar data från form
+
+        // Kontrollera om formuläret är tomt eller bara innehåller mellanslag
+        const isFormEmpty = Array.from(formData.values()).every(value => value.trim() === '');
+        if (isFormEmpty) {
+            alert("Fyll i alla fält korrekt för att kunna lägga till erfarenhet");
+            return;
+        }
+    
 
     // Skapar ett objekt med den insamlade datan
     const newWorkExperience = {
@@ -84,6 +92,7 @@ async function addWorkExperience(event) {
         window.location.href = 'index.html';
     } catch (error) { //Om fel
         console.error('Error:', error);
+        alert("Något gick fel när erfarenhet skulle läggas till");
     }
 }
 
