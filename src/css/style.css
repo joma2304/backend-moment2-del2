@@ -14,14 +14,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .logo {
+}
+
+.logo {
     width: 150px;
-  }
-  
-  /* Design av meny för mobilenheter, placeras till höger om skärmen */
-  nav {
+}
+
+/* Design av meny för mobilenheter, placeras till höger om skärmen */
+nav {
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
     font-size: 1.4em;
     position: absolute;
@@ -31,235 +31,237 @@ header {
     width: 60%;
     display: none;
     z-index: 999;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     width: 100%;
     list-style-type: none;
     text-align: center;
     margin: 0 auto;
     padding: 0;
-  }
-  
-  nav li {
+}
+
+nav li {
     padding: 0.8em 0;
     width: 100%;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 0 1em;
-  }
-  
-  nav li:hover {
+}
+
+nav li:hover {
     cursor: pointer;
     color: #fff;
-  }
-  
-  .active {
+}
+
+.active {
     color: #2833c0;
-  }
-  
-  /* Meny knapp, öppna meny */
-  .menu-btn {
+}
+
+/* Meny knapp, öppna meny */
+.menu-btn {
     display: flex;
     align-items: center;
     padding: 8px 15px;
     background-color: rgb(255, 255, 255);
     cursor: pointer;
     margin-right: 2px;
-  }
-  
-  .open {
+}
+
+.open {
     margin: 0 1em;
-  }
-  
-  .menu-btn:hover {
+}
+
+.menu-btn:hover {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
     border-radius: 50px;
     transition: ease-in 0.3s;
-  }
-  
-  
-  /* de tre svarta strecken (hamburg-icon) */
-  .bars {
+}
+
+
+/* de tre svarta strecken (hamburg-icon) */
+.bars {
     display: block;
     width: 20px;
     height: 3px;
     background-color: rgb(0, 0, 0);
     margin: 5px 0;
-  }
-  
-  
-  /* Meny knapp, stäng */
-  .close {
+}
+
+
+/* Meny knapp, stäng */
+.close {
     margin: 1em 1.5em;
     padding: 10px 15px;
-  
-  }
-  
-  /* Roterar två lodräda streck, till ett kryss */
-  .cross1 {
+
+}
+
+/* Roterar två lodräda streck, till ett kryss */
+.cross1 {
     width: 25px;
     transform: rotate(45deg);
     position: relative;
     top: 5px;
-  }
-  
-  .cross2 {
+}
+
+.cross2 {
     width: 25px;
     transform: rotate(135deg);
     position: relative;
     top: -3px;
-  }
-  
-  /* Media querys */
-  @media only screen and (max-width: 992px) {
-    nav {
-        background-color: rgb(184, 225, 184);
-    }
-  }
+}
 
-  /* Större skärmas - gör menyn som inline */
-  @media only screen and (min-width: 992px) {
-    header {
-      padding: 0 3em;
-    }
-  
-    .menu-btn {
-      display: none;
-    }
-  
-    #open-menu {
-      display: none !important;
-    }
-  
-    header {
-      position: static;
-    }
-  
+/* Media querys */
+@media only screen and (max-width: 992px) {
     nav {
-      display: block !important;
-      position: static;
-      box-shadow: 0 0px 0px;
-      height: auto;
-      font-size: 1.4em;
-      width: auto;
-      background-color: transparent;
+        background-color: rgb(168, 223, 235);
     }
-  
+}
+
+/* Större skärmas - gör menyn som inline */
+@media only screen and (min-width: 992px) {
+    header {
+        padding: 0 3em;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    #open-menu {
+        display: none !important;
+    }
+
+    header {
+        position: static;
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        box-shadow: 0 0px 0px;
+        height: auto;
+        font-size: 1.4em;
+        width: auto;
+        background-color: transparent;
+    }
+
     nav ul {
-      height: 100%;
+        height: 100%;
     }
-  
+
     nav li {
-      display: inline;
-      padding: 1.2em 0;
+        display: inline;
+        padding: 1.2em 0;
     }
-  }
+}
 
 body {
     min-height: 100vh;
     max-width: 900px;
     background: rgb(247,247,247);
-    background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(159,224,178,1) 100%);
-    
+    background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(23,210,232,1) 100%);
+
 }
 
-  h1 {
-    color: #333; 
-    font-size: 24px; 
+h1 {
+    color: #333;
+    font-size: 24px;
     margin-top: 20px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     text-align: center;
-  }
-  
+}
 
-  #arbets-list {
-    list-style-type: none; 
-    padding: 0; 
-  }
-  
-  #arbets-list li {
-    border-bottom: 1px solid #3c3c3c; 
+
+#arbets-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    overflow-x: hidden;
+}
+
+#arbets-list li {
+    border-bottom: 1px solid #3c3c3c;
     padding: 10px 0;
     margin: 10px 10px;
-    border-radius: 50px; 
+    border-radius: 20px;
     text-align: center;
-    background-color: #f9f9f9; 
-  }
-  
+    background-color: #f9f9f9;
+}
 
-  button {
-    background-color: #eb4e62; 
-    color: #fff; 
-    border: none; 
-    padding: 10px 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 12px; 
-    cursor: pointer; 
-    border-radius: 50px; 
-  }
-  
-  button:hover {
-    background-color: #973340; 
-  }
+button {
+    background-color: #eb4e62;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 5px;
+}
 
-  .submit {
-    background-color: #007bff; 
-    color: #fff; 
-    border: none; 
-    padding: 10px 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 50px; 
-  }
+button:hover {
+    background-color: #973340;
+}
 
-  .submit:hover {
-    background-color: #0056b3; 
-  }
+.submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+}
 
-  #add-arbets-form {
-    max-width: 400px; 
+.submit:hover {
+    background-color: #0056b3;
+}
+
+#add-arbets-form {
+    max-width: 400px;
     width: 85%;
-    margin: 0 auto; 
-    padding: 20px; 
-    background-color: #f9f9f9; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  }
-  
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  #add-arbets-form label {
-    display: block; 
-    margin-bottom: 10px; 
-  }
-  
 
-  #add-arbets-form input[type="text"] {
-    width: calc(100% - 20px); 
-    padding: 10px; 
-    margin-bottom: 15px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    box-sizing: border-box; 
-  }
+#add-arbets-form label {
+    display: block;
+    margin-bottom: 10px;
+}
 
-  .about-container {
-    background-color: #f9f9f9; 
+
+#add-arbets-form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.about-container {
+    background-color: #f9f9f9;
     width: 85%;
     padding: 10px;
-    border-radius: 50px;
-  }
+    border-radius: 20px;
+}
 
-  p {
+p {
     margin-left: 20px;
     margin-right: 20px;
-  }
+}
