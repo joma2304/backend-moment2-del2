@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lägg till erfarenhet</title>
+    <script src="js/main.js" type="module"></script>
 </head>
 
 <body>
@@ -18,6 +19,20 @@
             </ul>
         </nav>
     </header>
+    <h1>Lägg till erfarenhet</h1>
+    <form id="add-arbets-form">
+        <label for="companyname">Företags namn:</label>
+        <input type="text" id="companyname" name="companyname" required><br><br>
+        
+        <label for="jobtitle">Arbets titl:</label>
+        <input type="text" id="jobtitle" name="jobtitle" required><br><br>
+        
+        <label for="location">Plats:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        
+        
+        <input type="submit" value="Lägg till erfarenhet">
+    </form>
 
 </body>
 
