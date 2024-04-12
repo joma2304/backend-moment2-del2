@@ -4,5 +4,5 @@ I filen main.js ligger mina metoder samt DOM-manupulationen.
 I filen menu.js ligger min js-kod för min meny.
 
 ## Länkar
-*Länk till webbplatsen finns här: [https://effortless-marzipan-3c9b14.netlify.app/](https://effortless-marzipan-3c9b14.netlify.app/) 
-*Länk till API:et finns här: [https://backend-moment2-del1.onrender.com/api/workexperience](https://backend-moment2-del1.onrender.com/api/workexperience)
+* Länk till webbplatsen finns här: [https://effortless-marzipan-3c9b14.netlify.app/](https://effortless-marzipan-3c9b14.netlify.app/) 
+* Länk till API:et finns här: [https://backend-moment2-del1.onrender.com/api/workexperience](https://backend-moment2-del1.onrender.com/api/workexperience)
